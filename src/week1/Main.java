@@ -1,40 +1,21 @@
 package week1;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("자바 복습 시작");
+       System.out.println("=== 학생 관리 시스템 시작 ===");
 
-        int age = 20;
-        if (age >= 20) {
-            System.out.println("성인입니다.");
-        }
+       // Student 객체만 담을 수 있는 리스트
+       List<Student> students = new ArrayList<>();
 
-        System.out.print("좋아하는 숫자를 입력하세요: ");
-        Scanner scanner = new Scanner(System.in);
+       // 리스트에 학생 개체 추가
+       students.add(new Student("김철수", "컴퓨터공학", 3));
+       students.add(new Student("이영희", "시각디자인", 2));
+       students.add(new Student("박민수", "경영학", 4));
 
-        int num = scanner.nextInt();
-        System.out.println(num);
-
-        /*
-        String[] programmingLanguage1 = {"Python","C","Java","HTML","CSS","Javascript"};
-        for (String language: programmingLanguage1)
-            System.out.println(language);
-        //for each 구문은 기억이 잘 안 났음
-        */
-
-        ArrayList<String> programmingLanguage2 = new ArrayList<>();
-
-        programmingLanguage2.add("Python");
-        programmingLanguage2.add("C");
-        programmingLanguage2.add("Java");
-        programmingLanguage2.add("HTML");
-        programmingLanguage2.add("CSS");
-        programmingLanguage2.add("Javascript");
-
-        for (String language: programmingLanguage2)
-            System.out.println(language);
-
-        scanner.close();
+       for (Student s: students)
+           s.introduce();
     }
 }
