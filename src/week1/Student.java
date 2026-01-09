@@ -14,7 +14,19 @@ public class Student {
     }
 
     // 3. 메서드
-    public void introduce() {
-        System.out.println("안녕하세요! 저는 " + major + " 전공, " + name + "입니다.");
+    public void showInfo() {
+        System.out.println("이름: " + name + ", 전공: " + major + ", 점수 : " + grade);
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getGrade() {
+        return grade;
+    }
+
+    public void setGrade(int grade) {
+        this.grade = grade;
     }
 }
