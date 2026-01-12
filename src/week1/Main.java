@@ -43,7 +43,7 @@ public class Main {
                         System.out.println("등록된 학생이 없습니다.");
                     }
                     else {
-                        for (Student s: students) {
+                        for (Student s : students) {
                             s.showInfo();
                         }
                     }
